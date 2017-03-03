@@ -203,9 +203,11 @@
 				TargetAttributes = {
 					ECF30DD91AB7D422000144ED = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 0820;
 					};
 					ECF30DEE1AB7D423000144ED = {
 						CreatedOnToolsVersion = 6.2;
+						LastSwiftMigration = 0820;
 						TestTargetID = ECF30DD91AB7D422000144ED;
 					};
 				};
@@ -389,6 +391,7 @@
 				INFOPLIST_FILE = SBLoader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -399,6 +402,7 @@
 				INFOPLIST_FILE = SBLoader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -417,6 +421,7 @@
 				INFOPLIST_FILE = SBLoaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBLoader.app/SBLoader";
 			};
 			name = Debug;
@@ -432,6 +437,7 @@
 				INFOPLIST_FILE = SBLoaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SBLoader.app/SBLoader";
 			};
 			name = Release;
