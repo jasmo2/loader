@@ -33,7 +33,9 @@ class ViewController: UIViewController, HolderViewDelegate {
                               height: boxSize)
     holderView.parentFrame = view.frame
     holderView.delegate = self
+//    holderView.backgroundColor = UIColor(red: 0.0, green: 255.0, blue: 0.0, alpha: 1.0)
     view.addSubview(holderView)
+    holderView.addOval()
   }
   
   func animateLabel() {

@@ -18,16 +18,25 @@ class HolderView: UIView {
     weak var delegate:HolderViewDelegate?
 
     override init(frame: CGRect) {
-    super.init(frame: frame)
-    backgroundColor = Colors.clear
+        super.init(frame: frame)
+        backgroundColor = Colors.clear
     }
-
-    required init(coder: NSCoder) {
-    super.init(coder: coder)!
-        
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+//
+//    required init(coder: NSCoder) {
+//        super.init(coder: coder)!
+//    }
+    
     func addOval() {
         layer.addSublayer(ovalLayer)
         ovalLayer.expand()
+        Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(HolderView.wooble), userInfo: nil, repeats: false)
     }
-}
+    
+    func wooble()  {
+        ovalLayer.wobble()
+    }
 }
