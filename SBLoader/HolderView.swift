@@ -31,6 +31,10 @@ class HolderView: UIView {
 //        super.init(coder: coder)!
 //    }
     
+    func addLabel() {
+        delegate?.animateLabel()
+    }
+    
     func addOval() {
         layer.addSublayer(ovalLayer)
         ovalLayer.expand()
@@ -41,6 +45,28 @@ class HolderView: UIView {
     func drawAnimatedTriagle() {
         triangleLayer.animate()
         Timer.scheduledTimer(timeInterval: 0.9, target: self, selector: #selector(HolderView.spinAndTransform), userInfo: nil, repeats: false)
+    }
+    
+    func expandView() {
+        self.backgroundColor = Colors.red
+        //    public init(origin: CGPoint, size: CGSize)
+
+        frame = CGRect(
+            origin: CGPoint(x: frame.origin.x, y: frame.origin.y),
+            size: CGSize(width: frame.width , height: frame.height)
+        )
+        layer.sublayers = nil
+        
+        UIView.animate(
+            withDuration: 0.3, delay: 0.0,
+            options: UIViewAnimationOptions.curveEaseInOut,
+            animations: {
+                self.frame = self.parentFrame
+            },
+            completion: { finished in
+                self.addLabel()
+            }
+        )
     }
     
     func spinAndTransform()  {
